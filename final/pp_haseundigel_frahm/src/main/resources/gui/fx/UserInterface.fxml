@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="gui.UserInterfaceController">
+
+   <!-- HBox to contain the ImageView and the controls -->
+   <HBox spacing="10" VBox.vgrow="ALWAYS">
+      <!-- AnchorPane containing ImageView -->
+      <AnchorPane fx:id="boardAnchorPane" VBox.vgrow="ALWAYS">
+         <ImageView fx:id="boardImageView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Image url="@../img/Board.png"/>
+         </ImageView>
+      </AnchorPane>
+
+      <!-- VBox to contain the controls -->
+      <StackPane fx:id="controlsStackPane" style="-fx-padding: 0 20 0 0;" maxWidth="135" >
+         <VBox fx:id="playerInfoVBox" spacing="5">
+            <Label minHeight="10"/>
+            <Label fx:id="nameLabel" text="Am Zug: Cäsar" wrapText="true" maxWidth="200.0"/>
+            <Label fx:id="carrotsLabel" text="Karotten: 68" wrapText="true" styleClass="textlabel"/>
+            <Label fx:id="saladsLabel" text="Salate: 3" wrapText="true" styleClass="textlabel"/>
+         </VBox>
+
+         <VBox alignment="BOTTOM_LEFT">
+
+            <!-- player count selector -->
+            <Label fx:id="playerCountLabel" text="Spieleranzahl" styleClass="textlabel"/>
+            <Spinner fx:id="playerCountSpinner" min="2" max="6" prefWidth="80" styleClass="custom-spinner"/>
+
+
+
+            <!-- player names section label  -->
+            <Label minHeight="10"/>
+            <Label fx:id="playerNamesLabel" text="Spielernamen" styleClass="textlabel"/>
+
+
+            <VBox fx:id="playerNameVBox" spacing="5" minHeight="180"/>
+
+            <Label minHeight="50"/>
+
+            <!-- Buttons -->
+            <VBox spacing="10">
+               <Button fx:id="newButton" text="Neu" minHeight="30" maxWidth="Infinity"/>
+               <Button fx:id="loadButton" text="Laden" minHeight="30" maxWidth="Infinity"/>
+               <Button fx:id="saveButton" text="Speichern" minHeight="30" maxWidth="Infinity"/>
+            </VBox>
+
+            <Label minHeight="50"/>
+
+            <Button fx:id="exitButton" text="Beenden" minHeight="30" maxWidth="Infinity"/>
+
+            <Label minHeight="30"/>
+         </VBox>
+      </StackPane>
+   </HBox>
+</VBox>

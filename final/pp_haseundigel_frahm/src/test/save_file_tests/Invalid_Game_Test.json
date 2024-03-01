@@ -1,0 +1,8 @@
+{
+  "currPlayer": 1,
+  "onTarget": [],
+  "players": [
+    {"name": "Anton", "suspended": false, "eatsSalad": false, "position": 36, "carrots": 3, "salads": 3},
+    {"name": "Berta", "suspended": false, "eatsSalad": false, "position": -1, "carrots": 3, "salads": -1}
+  ]
+}
